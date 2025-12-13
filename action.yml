@@ -1,0 +1,21 @@
+name: 'API Key Secure Generator'
+description: 'A GitHub Action to generate a secure API key.'
+author: 'Frangel Barrera'
+
+inputs:
+  KEY_LENGTH:
+    description: 'The length of the API key to be generated'
+    required: false
+    default: '32'
+
+outputs:
+  key:
+    description: 'The generated API key'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'lock'
+  color: 'green'
